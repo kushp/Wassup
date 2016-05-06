@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/css/wassup.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/ext/bootstrap.min.css"/>
+  </head>
+  <body>
+  <nav class="navbar navbar-default wasnav" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img alt="Wassup!" src="/static/wassup_logo_small.png">
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div id="app_container" class="app_container">
+    <div class="login_content">
+    %if error_message:
+    <p>
+      <em>{{error_message}}</em>
+    </p>
+    %end
+
+    <form method="POST" id="" action="/logged_in" enctype="multipart/form-data">
+      Desired username
+      <input type="text" name="user_id" class="form-control"/><br>
+      Full name
+      <input type="text" name="full_name" class="form-control"/><br>
+      <input type="submit" value="Log In" class="form-conrol btn btn-primary"/>
+    </form>
+    </div>
+  </div>
+    <script src="static/js/ext/underscore.js"></script>
+    <script src="/static/js/ext/jquery-1.11.2.min.js"></script>
+    <script src="/static/js/ext/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/wassup.js"></script>
+  </body>
+</html>

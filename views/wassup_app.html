@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wassup!</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/wassup.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/ext/bootstrap.min.css"/>
+  </head>
+  <body>
+  <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar"
+                 aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+              Loading...
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <nav class="navbar navbar-default wasnav" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <img alt="Wassup!" src="/static/wassup_logo_small.png">
+          </a>
+        </div>
+        <div class="navbar-right nav-right-actions">
+          <span id="desktop_sup_count_container">Sups <span id="desktop_sup_count" class="badge">0</span></span>
+          <div class="btn-group">
+            <button id="current_server" type="button" class="btn btn-default navbar-btn">Private Server</button>
+            <button type="button" class="btn btn-default navbar-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a id="private_selected" href="#">Private Server</a></li>
+              <li><a id="public_selected" href="#">Public Server</a></li>
+            </ul>
+          </div>
+          <form class="logout_form" action="/logout" method="POST"><input type="submit" class="btn btn-primary navbar-btn" role="button" value="Log out"></form>
+        </div>
+      </div>
+    </nav>
+    <div id="app_container" class="app_container">
+      <template id="success_alert_template">
+        <div class="alert alert-success" role="alert"><a href="#" class="close" data-dismiss="alert">&times;</a><span class="alert_message"></span></div>
+      </template>
+      <template id="error_alert_template">
+        <div class="alert alert-danger" role="alert"><a href="#" class="close" data-dismiss="alert">&times;</a><span class="alert_message"></span></div>
+      </template>
+      <div class="add_friend_actions input-group">
+        <input id="add_friend_text" type="text" class="form-control" placeholder="Friend User Id">
+        <div class="input-group-btn">
+          <button id="add_friend_btn" class="btn btn-default">Add Friend</button>
+        </div>
+      </div>
+      <div class="mobile_friend_list_container input-group">
+        <select id="mobile_friend_list" class="form-control">
+        </select>
+        <div class="input-group-btn mobile-btn-group">
+            <button id="mobile_send_sup" class="btn btn-default mss">Send Sup</button>
+        </div>
+      </div>
+      <div class="sup_message_container">
+        <div class="friend_controls">
+        <div class="btn-group">
+          <button id="desktopRemoveFriends" type="button" class="btn btn-default">Remove Friend(s)</button>
+          <button id="desktopSupFriends" type="button" class="btn btn-default">Sup Friend(s)</button>
+        </div>
+        <select id="desktop_friend_list" multiple class="form-control">
+        </select>
+        </div>
+        <div class="sup_controls">
+          <canvas id="sup_message" width="450" height="550"></canvas>
+          <div class="btn-group sup_control_group">
+            <button id="prev_sup" type="button" class="btn btn-default btn-lg">Previous</button>
+            <button id="delete_sup" type="button" class="btn btn-default btn-lg">Delete</button>
+            <button id="next_sup" type="button" class="btn btn-default btn-lg">Next</button>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+
+    <script src="static/js/ext/underscore.js"></script>
+    <script src="/static/js/ext/jquery-1.11.2.min.js"></script>
+    <script src="/static/js/ext/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/view.js"></script>
+    <script type="text/javascript" src="/static/js/model.js"></script>
+    <script type="text/javascript" src="/static/js/wassup.js"></script>
+  </body>
+</html>

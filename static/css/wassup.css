@@ -1,0 +1,121 @@
+.logo {
+    width: 250px;
+}
+
+.app_container {
+    display: block;
+    min-width: 450px;
+    max-width: 960px;
+    /*min-width: 450px;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add_friend_actions {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.sup_message_container {
+    display: block;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: center;
+}
+
+.navbar-brand {
+    padding: 0 !important;
+}
+
+.nav-right-actions {
+    float: right !important;
+    padding-right: 10px;
+}
+
+.wasnav {
+    min-width: 450px;
+}
+
+.friend_controls {
+    float: left;
+}
+
+.sup_controls {
+    float:right;
+    width: 620px;
+}
+
+.sup_message_container {
+    margin-top: 20px;
+}
+
+#desktop_friend_list {
+    display: block;
+    width: 253px;
+    height: 500px;
+    margin-top: 5px;
+}
+
+#mobile_friend_list {
+    display: none;
+}
+
+.mobile_friend_list_container {
+    display: none;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.mobile-btn-group {
+    display: none;
+}
+
+.mss {
+    display: none !important;
+}
+
+.logout_form {
+    display: inline;
+}
+
+.clear {
+    clear: both;
+}
+
+.alert {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+@media screen and (max-width: 451px) {
+    .mobile_friend_list_container {
+        display: block;
+    }
+
+    #mobile_friend_list {
+        display: block;
+    }
+
+    .mobile-btn-group {
+        display: block;
+    }
+
+    .mss {
+        display: block !important;
+    }
+
+    .friend_controls {
+        display: none;
+    }
+
+    .sup_controls {
+        float: none;
+        width: 450px;
+    }
+}
+
+.login_content {
+    margin-left: 15px;
+    margin-right: 15px;
+}
